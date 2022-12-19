@@ -39,7 +39,10 @@ void	make_move(int **board) {
 
 int	check_winner(int **board) {
 	int	i;
+	int	j;
+	int	occupied_places;
 
+	occupied_places = 0;
 	i = -1;
 	while (++i < 3) {
 		if (board[i][0] == 'O' && board[i][1] == 'O' && board[i][2] == 'O') {
@@ -78,6 +81,19 @@ int	check_winner(int **board) {
 			printf("The player X win!\n");
 			return (1);
 		}
+	}
+	i = -1;
+	while (++i < 3) {
+		j = -1;
+		while (++j < 3) {
+			if (board[i][j] != ' ')
+				occupied_places++;
+		}
+	}
+	if (occupied_places == 9) {
+		print_board(board);
+		printf("It's a draw!\n");
+		return (1);
 	}
 	return (0);
 }
