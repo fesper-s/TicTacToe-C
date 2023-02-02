@@ -1,5 +1,5 @@
-# Tic-tac-toe in C
-I tried to make a tic-tac-toe program in C by myself (only).
+# Tic-tac-toe in C - ❌⭕️
+I made a tic-tac-toe program in C just by myself.
 
 ## How to use
 ### Clone
